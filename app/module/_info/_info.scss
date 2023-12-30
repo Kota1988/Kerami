@@ -1,0 +1,100 @@
+.info {
+  background-image: url('../../images/info-bg.jpg');
+  // background-size: contain;
+  padding: 90px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 90px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 83px;
+      height: 527px;
+      background-image: url('../../images/info-three-snow.png');
+      left: 46%;
+    }
+  }
+
+  &__item {
+    max-width: 510px;
+    margin-bottom: 75px;
+
+    &:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
+
+  &__item-title {
+    @extend %Unbounded-400;
+    font-size: 25px;
+    color: $accent;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .info {
+    padding: 0;
+
+    &__items {
+      align-items: center;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__item {
+
+      max-width: 450px;
+      text-align: center;
+
+      &:nth-child(2) {
+        align-self: center;
+      }
+    }
+  }
+}
+
+// @media (max-width: 1050px) {
+//   .info {
+//     &__items {
+//       padding: 0;
+//     }
+
+//     &__item {
+//       margin-bottom: 0;
+//     }
+//   }
+// }
+
+@media (max-width: 800px) {
+  .info {
+    background-position: 100% 100%;
+
+    &__items {
+      padding: 0;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__item-title {
+      font-size: 17px;
+    }
+  }
+}

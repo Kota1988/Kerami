@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // background: linear-gradient(180deg, rgb(15, 86, 228) 0%, rgba(255, 255, 255, 1) 15%);
+  background: linear-gradient(180deg, rgb(125, 15, 228) 0%, rgba(255, 255, 255, 1) 15%);
+  background-repeat: no-repeat;
+  color: $title;
+  font-size: 15px;
+  // добавили шрифт по умолчанию на весь бади
+  @extend %OpenSans-400;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+a {
+  color: inherit;
+  font-size: 16px;
+  line-height: 26px;
+  @extend %Unbounded-400;
+}
+
+.title {
+  font-size: 35px;
+  @extend %Unbounded-300;
+  color: $accent;
+  text-transform: uppercase;
+}
+
+
+// 1450px
+// 1230px
+// 1150px
+// 1050px
+// 800px
+// 630px
+// 550px
+// 450px
+// 375px

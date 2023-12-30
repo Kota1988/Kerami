@@ -1,0 +1,134 @@
+.header {
+  &__inner {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+
+  .menu {
+    margin-left: auto;
+
+    &__btn {
+      display: none;
+    }
+
+    &__btn-line {
+      display: inline-block;
+      width: 40px;
+      height: 4px;
+      background-color: $accent;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background-color: $accent;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+
+      &.close {
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(-45deg);
+          top: -7px;
+          transition: all .3s;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          top: -7px;
+          transition: all .3s;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    @extend %btn;
+  }
+}
+
+.menu-list {
+  display: flex;
+
+  &__item {
+    margin-right: 73px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $title;
+
+    &:hover {
+      color: $bg;
+    }
+  }
+}
+
+
+@media (max-width: 1150px) {
+  .header {
+    &__phone {
+      display: none;
+    }
+
+    .menu {
+      margin-bottom: 30px;
+
+      &__btn {
+        display: block;
+      }
+    }
+
+    .menu-list {
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 167px;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background: #fff;
+      transition: all .5s;
+      transform: translateX(0);
+
+      &.menu-list--hide {
+        transform: translateX(-200%);
+      }
+
+      &__item {
+        margin-right: 0;
+        padding: 15px;
+      }
+
+      &__link {
+        display: block;
+      }
+
+
+    }
+
+  }
+}
+
+// transform: rotate(45deg);
+//     top: 7px;
+
+// transform: rotate(-45deg);
+
+// bottom display none

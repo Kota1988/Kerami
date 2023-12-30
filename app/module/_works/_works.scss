@@ -1,0 +1,153 @@
+.works {
+  &__inner {
+    padding-bottom: 120px;
+  }
+
+  &__text {
+    max-width: 350px;
+  }
+
+  &__content {
+    position: absolute;
+    right: 213px;
+    top: 36px;
+  }
+
+  &__items {
+    display: flex;
+    position: relative;
+  }
+
+  &__box-one {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    margin-right: 25px;
+  }
+
+  &__box-two {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+
+
+  }
+
+  &__item {
+    border-radius: 50%;
+  }
+
+  &__item-one {
+    margin-bottom: 25px;
+  }
+
+  &__item-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 110px;
+  }
+}
+
+@media (max-width:1450px) {
+  .works {
+    &__items {
+      flex-direction: column-reverse;
+
+    }
+
+    &__box-one {
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      gap: 10px;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+
+    &__box-two {
+      justify-content: space-evenly;
+    }
+
+    &__content {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}
+
+@media (max-width:1230px) {
+  .works {
+
+    &__box-two {
+      gap: 10px;
+    }
+
+    &__content {
+      max-width: 410px;
+    }
+  }
+}
+
+@media (max-width:1050px) {
+  .works {
+    &__inner {
+      padding-bottom: 60px;
+    }
+
+    &__items {
+      padding-top: 120px;
+    }
+
+    &__box-one {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__box-two {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__content {
+      right: 50%;
+      min-width: 100%;
+      text-align: center;
+    }
+
+    &__text {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      &:nth-of-type(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width:800px) {
+  .works {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width:375px) {
+  .works {
+    &__items {
+      padding-top: 160px;
+    }
+
+    &__box-one {
+      display: none;
+    }
+  }
+}

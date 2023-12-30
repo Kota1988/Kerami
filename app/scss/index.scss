@@ -1,0 +1,17 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import '../../node_modules/slick-carousel/slick/slick';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../module/_header/header';
+@import '../module/_top/top';
+@import '../module/_about/about';
+@import '../module/_works/works';
+@import '../module/_info/info';
+@import '../module/_price/price';
+@import '../module/_rewiews/rewiews';
+@import '../module/_contact/contact';
+@import '../module/_footer/footer';

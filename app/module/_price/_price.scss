@@ -1,0 +1,186 @@
+.price {
+  &__inner {
+    text-align: center;
+    padding: 0 90px;
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 550px;
+    margin: 0 auto 50px;
+
+  }
+}
+
+.price-slider {
+
+  &__item-box {
+    border-radius: 30px;
+    border: 1px solid $accent;
+
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 0 15px;
+
+  }
+
+  &__item-title {
+    color: $accent;
+    font-size: 20px;
+    @extend %Unbounded-400;
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    color: $accent;
+    margin-bottom: 10px;
+  }
+
+  &__item-list {
+    text-align: left;
+    margin-bottom: 20px;
+
+    li {
+      padding-left: 50px;
+
+    }
+  }
+
+  &__item-number {
+    font-size: 25px;
+    @extend %Unbounded-400;
+    margin-bottom: 25px;
+  }
+
+  &__item-btn {
+    margin-bottom: 30px;
+    @extend %btn;
+  }
+
+  .slick-list {
+    margin: 0 -37px;
+  }
+
+  .slick-slide {
+    margin: 0 37px;
+  }
+
+  .slick-dots button {
+    border-color: $accent;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0;
+    height: 20px;
+    width: 20px;
+  }
+
+  .slick-dots {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    li {
+      margin: 0 10px;
+    }
+
+    li.slick-active button {
+      background-color: $bg;
+    }
+  }
+
+  .slick-prev {
+    background-image: url('../../images/angle-left.svg');
+    left: -80px;
+  }
+
+  .slick-next {
+    background-image: url('../../images/angle-right.svg');
+    right: -80px;
+  }
+
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width:1230px) {
+  .price {
+    &__inner {
+      padding: 70px;
+    }
+  }
+
+
+  .price-slider {
+    &__item-text {
+      max-width: 350px;
+      margin: 0 auto 10px;
+
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .price {
+    &__inner {
+      padding: 0 70px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width:450px) {
+  .price {
+    &__inner {
+      padding: 0 15px;
+    }
+
+    &__text {
+      margin-bottom: 25px;
+    }
+  }
+
+  .price-slider {
+    &__item-btn {
+      font-size: 15px;
+    }
+
+    .slick-dots {
+      margin: 10px 0;
+    }
+
+    .slick-dots button {
+      height: 15px;
+      width: 15px;
+    }
+
+    .slick-list {
+      margin: 0 -5px;
+    }
+
+    .slick-slide {
+      margin: 0 5px;
+    }
+
+  }
+}

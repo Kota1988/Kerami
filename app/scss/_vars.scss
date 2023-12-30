@@ -1,0 +1,68 @@
+$accent: #015dcc;
+$default: #8d8d8d;
+$title: #000;
+$bg: #ffd058;
+
+
+%Unbounded-300 {
+  font-family: 'Unbounded-Light', sans-serif;
+  font-weight: 300;
+}
+
+%Unbounded-400 {
+  font-family: 'Unbounded-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%Unbounded-700 {
+  font-family: 'Unbounded-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%OpenSans-300 {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 300;
+}
+
+%OpenSans-400 {
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%OpenSans-700 {
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%btn {
+  font-size: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  background-color: $bg;
+  @extend %Unbounded-700;
+  cursor: pointer;
+}
+
+%checkbox-hidden,
+%radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
